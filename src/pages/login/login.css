@@ -1,131 +1,100 @@
-.loginContainer{
+/* .loginContainer{
     background: url("/src/images/loginbg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-}
+} */
 
-.page {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75em;
-}
-
-.cover {
-    background-color: white;
-    width: 70%;
-    height: 50%;
-    position: relative;
-    border-radius: 1em;
-    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.alt-login {
-    width: 80%;
-    height: 3em;
-    display: flex;
-    justify-content: space-around;
-}
-
-.alt-login div {
-    width: 47.5%;
-    height: 90%;
-    border-radius: 0.25em;
-    background-color: white;
+ .login_container{
+    background: url("/src/images/loginbg.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    cursor: pointer;
+    height: 100vh;
 }
 
-.google {background-image: url("../../images/google.svg");}
-.facebook {background-image: url("../../images/facebook.svg");}
-
-input {
-    border: none;
-    background-color: rgb(229, 226, 226);
-    width: 80%;
-    border-radius: 0.25em;
-    text-align: center;
-    padding: 2em;
-    font-size: 0.75em;
-}
-
-input:focus {
-    outline-color: rgb(32, 177, 255);
-}
-
-.login-btn {
-    width: 40%;
-    height: 3em;
-    background-color: rgb(32, 177, 255);
+.box{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
-    border-radius: 0.25em;
-    cursor: pointer;
+    min-height: 90vh;
 }
-
-.login-btn:hover { transform: scale(1.25);}
-
-.text {
-    position: relative;
-    bottom: 0.5%;
-}
-
-.hide {
-    position: absolute;
-    transform: scale(0);
-}
-
-.login-popup {
-    position: absolute;
-    height: 30em;
-    width: 30em;
+.container{
+    width: 350px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 0 15px 0 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.top > span{
+    color: black;
+    font-size: small;
+    display: flex;
     justify-content: center;
-    border-radius: 0.25em;
-    background-color: black;
-    color: white;
-    bottom: 0;
-    transform: scale(1);
-    transition: 1.5s;
+    padding: 10px 0 10px 0;
+    margin-top: 15px;
 }
-
-
-
-/* -------------------- TABLET OPTIMIZATION -------------------- */
-@media only screen and (min-device-width: 37em) {
-    .page {
-        font-size: 1em;
-    }
-
-    .cover {
-        width: 60%;
-        height: 70%;
-    }
+header{
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
 }
-
-/* -------------------- DESKTOP OPTIMIZATION -------------------- */
-@media only screen and (min-device-width: 64em) {
-    .page {
-        font-size: 1.25em;
-    }
-
-    .cover {
-        width: 25%;
-        height: 65%;
-    }
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    margin: 5px;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+}
+i{
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: black;
+}
+::-webkit-input-placeholder{
+    color: black;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: #fff;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,36,9,1) 35%, rgba(0,212,255,1) 100%);
+    cursor: pointer;
+    transition: .3s ;
+    margin: 10px;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+    margin: 10px;
+}
+label a{
+    text-decoration: none;
+    color: black;
 }

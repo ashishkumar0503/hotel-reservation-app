@@ -54,6 +54,10 @@ const Hotel = () => {
     setSlideNumber(newSlideNumber)
   };
 
+  const handleBook = () => {
+    alert('Booking Successful');
+  }
+
   return (
     <div>
       <Navbar />
@@ -82,7 +86,7 @@ const Hotel = () => {
           </div>
         )}
         <div className="hotelWrapper">
-          <button className="bookNow">Reserve or Book Now!</button>
+          <button className="bookNow" onClick={handleBook} >Reserve or Book Now!</button>
           <h1 className="hotelTitle">Tower Street Apartments</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
@@ -132,7 +136,7 @@ const Hotel = () => {
               <h2>
                 <b>$945</b> (9 nights)
               </h2>
-              <button>Reserve or Book Now!</button>
+              <button onClick={handleBook} >Reserve or Book Now!</button>
             </div>
           </div>
         </div>
