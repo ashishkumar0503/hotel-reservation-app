@@ -12,7 +12,7 @@ const Login = () => {
   const nameRegEx = /^[a-zA-Z0-9]+$/;
   const handleName = (e) => {
     let name = e.target.value;
-    if (name === "" || name.length < 6 || !name.match(nameRegEx)) {
+    if (name === "" || name.length <= 6 || !name.match(nameRegEx)) {
       setNameError(true);
     } else {
       setNameError(false);
@@ -55,7 +55,7 @@ const Login = () => {
     <div class="container">
         <div class="top">
             <span>Have an account?</span>
-            <header>Login</header>
+            <header className="head">Login</header>
         </div>
         <div class="input-field">
             <input type="text" value={name} onChange={handleName} class="input" placeholder="Username" id="un" />

@@ -37,7 +37,12 @@ const Header = ({type}) => {
     const navigate = useNavigate()
 
     const handleSearch = () => {
-        navigate("/hotels", { state: {destination, date, options} })
+        let place = document.getElementById('place').value;
+        if (place === "") {
+            alert('Please select the destination');
+        } else {
+            navigate("/hotels", { state: {destination, date, options} })
+        }
     }
 
   return (
@@ -77,7 +82,7 @@ const Header = ({type}) => {
                     <div className="headerSearch">
                         <div className="headerSearchItem">
                             <FontAwesomeIcon icon={faBed} className="headerIcon" />
-                            <input onChange={e => setDestination(e.target.value)} type="text" placeholder="Where are you going?" className="headerSearchInput" />
+                            <input onChange={e => setDestination(e.target.value)} id="place" type="text" placeholder="Where are you going?" className="headerSearchInput" />
                         </div>
                         <div className="headerSearchItem">
                             <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
